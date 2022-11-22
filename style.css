@@ -1,0 +1,594 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(157, 179, 219);
+
+}
+.container{
+    grid-template-areas:
+    'nav nav nav'
+    'header main aside'
+    'section main aside'
+    'section main aside'
+    'section main aside'
+    'section footer aside'
+    'section footer aside';
+    height: 150vh;
+    display: grid;
+    grid-template-columns: 420px 420px 1fr;
+    grid-template-rows: 80px 150px 150px 150px;
+    margin: 50px 0 50px 0;
+    row-gap: 1px;
+    column-gap: 1px;
+    background-color: #e0e5eb;
+}
+nav{
+    background-color: #0c0a52;
+    display:inline-flex;
+    padding: 25px;
+}
+label.logo{
+    margin: 0 0 0 70px;
+    font-size: 20px;
+    color: greenyellow;
+}
+.nav{
+    flex: 1;
+    text-align: right;
+    
+}
+ul{
+    display: inline-flex;
+}
+.nav ul li{
+    list-style: none;
+    margin-right: 30px;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+.img{
+    width: 3%;
+    border-radius: 50%;
+    height: 60%;
+}
+.content1{
+    display: none;
+    background-color: #000040;
+}
+.nav ul li:hover .content1{
+    display: block;
+    position: absolute;
+    
+}
+.nav ul li:hover .content1 ul{
+    display:block;
+    margin: 10px;
+}
+
+.nav ul li:hover .content1 ul li{
+    text-align: left;
+    background: transparent;
+    padding: 5px;
+    width: 60px;  
+}
+.content2{
+    display: none;
+}
+.hover:hover .content2{
+    position: absolute;
+    display: block;
+    margin-top: -30px;
+    margin-left: 90px;
+    background-color: #000040;
+    width: 80%;
+}
+.image{
+    border-radius: 50%;
+    height: 10%;
+    width: 10%;
+}
+
+header{
+    background-color: white;
+    margin: 10px 10px;
+    border-radius: 8px;
+}
+.container2{
+    font-size: 13px;
+    font-weight: 800;
+    font-family: sans-serif;
+    margin: 20px;
+    color: blue;
+}
+.container3{
+    margin: 40px 10px 20px 20px;
+}
+.note{
+    border-radius: 14px;
+    padding: 5px;
+    border-color: gainsboro;
+    border-top-color: gainsboro;
+    border-style: groove;
+    
+}
+.button{
+    background-color: blue;
+    color: white;
+    border-style: none;
+    padding: 10px;
+    margin-left: 120px;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.container4{
+    display: flex;
+    padding: 10px;
+}
+.content4{
+    margin-left: 10px;
+}
+.title{
+    color: rgb(71, 70, 70);
+}
+.date{
+    margin-left: 140px;
+    padding: 10px;
+    color: rgb(109, 106, 106);
+}
+.container5{
+    padding: 10px 0px 0px 27px;
+    color: rgb(71, 70, 70);
+}
+.container6{
+    border: 2px gainsboro solid;
+    margin-left: 60px;
+    margin-right: 65px;
+    margin-top: 15px;
+}
+.content5{
+    padding-left: 7px;
+    font-size: 13px;
+    color: rgb(63, 61, 61);
+    padding-right: 5px;
+    width: 100%;
+}
+main{
+    background-color: white;
+    padding: 20px;
+    margin: 10px 10px;
+}
+footer{
+    background-color: white;
+    padding: 10px;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.design{
+    padding: 10px;
+    color: rgb(107, 105, 105);
+    font-size: 15px;
+    width: 93%;
+}
+aside{
+    background-color: white;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.head{
+    color: blue;
+    font-weight: 700;
+    padding: 10px 0 0 10px;
+}
+.code{
+    display: flex;
+    margin: 10px;
+    padding-top: 10px;
+}
+.code1{
+    margin-left: 10px;
+    padding-top: 10px;
+}
+.code2{
+    font-size: 20px;
+
+}
+.code3{
+    color: rgb(107, 105, 105);
+}
+.add{
+    background-color: blue;
+    color: white;
+    border-style: none;
+    padding: 10px 30px;
+    display: inline-block;
+    border-radius: 12px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.mark{
+    margin-left: 50px;
+    padding: 10px;
+    color: rgb(109, 106, 106);
+    cursor: pointer;
+    text-align: right;
+}
+.codeimg{
+    border-radius: 50%; 
+    width: 22%; 
+    height: 20%;
+}
+nav{
+    grid-area: nav;
+}
+header{
+    grid-area: header;
+}
+main{
+    grid-area: main;
+}
+section{
+    grid-area: section;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}
+
+@media (max-width:1024px){
+    .nav{
+        display: none;
+    }
+    label.logo{
+         font-size: 25px;
+         margin: 0 0 0 5px;
+    }
+    .img{
+        width: 50%;
+        display: none;
+    }.note{
+        border-radius: 14px;
+        padding: 5px;
+        border-color: gainsboro;
+        border-top-color: gainsboro;
+        border-style: groove;
+        
+    }
+    .codeimg{
+        border-radius: 50%; 
+        width: 10%; 
+        height: 20%;
+    }
+    .code{
+        display: flex;
+        margin: 10px;
+        padding-top: 10px;
+    }
+    .container6{
+        border: 2px gainsboro solid;
+        margin-left: 250px;
+        margin-right: 250px;
+        margin-top: 15px;
+    }
+    .container{
+        grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer'
+        'section'
+        'aside';
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 150px 480px 190px 730px 770px;
+        background-color: #e0e5eb;
+        width: 100%;
+        height: 320vh;
+        margin: 20px 0 20px 0;
+        
+        
+    }
+    .fa{
+        margin-left: 120px;
+    }
+    .mark{
+        margin-left: 500px;
+        padding: 10px;
+        color: rgb(109, 106, 106);
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    .button{
+        background-color: blue;
+        color: white;
+        border-style: none;
+        padding: 10px;
+        margin-left: 490px;
+    }
+    .date{
+        margin-left: 460px;
+        padding: 20px;
+        color: rgb(109, 106, 106);
+    }
+}
+@media (max-width:768px){
+    .nav{
+        display: none;
+    }
+    label.logo{
+         font-size: 25px;
+         margin: 0 0 0 5px;
+    }
+    .img{
+        width: 50%;
+        display: none;
+    }.note{
+        border-radius: 14px;
+        padding: 5px;
+        border-color: gainsboro;
+        border-top-color: gainsboro;
+        border-style: groove;
+        
+    }
+    .container6{
+        border: 2px gainsboro solid;
+        margin-left: 120px;
+        margin-right: 120px;
+        margin-top: 15px;
+    }
+    .container{
+        grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer'
+        'section'
+        'aside';
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 150px 480px 190px 730px 770px;
+        background-color: #e0e5eb;
+        width: 80%;
+        height: 420vh;
+        margin-left: 200px;
+        margin: 15px 0px 15px 80px;
+    }
+
+    .mark{
+        margin-left: 230px;
+        padding: 10px;
+        color: rgb(109, 106, 106);
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    .button{
+        background-color: blue;
+        color: white;
+        border-style: none;
+        padding: 10px;
+        margin-left: 250px;
+    }
+    .date{
+        margin-left: 250px;
+        padding: 20px;
+        color: rgb(109, 106, 106);
+    }
+}
+@media (max-width:425px){
+    .nav{
+        display: none;
+    }
+    label.logo{
+         font-size: 25px;
+         margin: 0 0 0 5px;
+    }
+    .img{
+        width: 50%;
+        display: none;
+    }.note{
+        border-radius: 14px;
+        padding: 5px;
+        border-color: gainsboro;
+        border-top-color: gainsboro;
+        border-style: groove;
+        
+    }
+    .container6{
+        border: 2px gainsboro solid;
+        margin-left: 90px;
+        margin-right: 90px;
+        margin-top: 20px;
+    }
+    .container{
+        grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer'
+        'section'
+        'aside';
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 150px 480px 190px 730px 770px;
+        background-color: #e0e5eb;
+        width: 102%;
+        height: 420vh;
+        margin: 20px 0 20px 0;
+    }
+    .fa{
+        margin-left: 120px;
+    }
+    .mark{
+        margin-left: 120px;
+        padding: 10px;
+        color: rgb(109, 106, 106);
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    .button{
+        background-color: blue;
+        color: white;
+        border-style: none;
+        padding: 10px;
+        margin-left: 100px;
+    }
+    .date{
+        margin-left: 110px;
+        padding: 20px;
+        color: rgb(109, 106, 106);
+    }
+}
+@media (max-width:375px){
+    .nav{
+        display: none;
+    }
+    label.logo{
+         font-size: 25px;
+         margin: 0 0 0 5px;
+    }
+    .img{
+        width: 50%;
+        display: none;
+    }.note{
+        border-radius: 14px;
+        padding: 5px;
+        border-color: gainsboro;
+        border-top-color: gainsboro;
+        border-style: groove;
+        
+    }
+    .container6{
+        border: 2px gainsboro solid;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .container{
+        grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer'
+        'section'
+        'aside';
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 150px 480px 190px 730px 770px;
+        background-color: #e0e5eb;
+        width: 124%;
+        height: 420vh;
+        margin: 20px 0 20px 0;
+    }
+    .mark{
+        margin-left: 150px;
+        padding: 10px;
+        color: rgb(109, 106, 106);
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    .button{
+        background-color: blue;
+        color: white;
+        border-style: none;
+        padding: 10px;
+        margin-left: 120px;
+    }
+    .date{
+        margin-left: 125px;
+        padding: 20px;
+        color: rgb(109, 106, 106);
+    }
+    
+}
+@media (max-width:320px){
+    .nav{
+        display: none;
+    }
+    label.logo{
+         font-size: 25px;
+         margin: 0 0 0 5px;
+    }
+    .img{
+        width: 50%;
+        display: none;
+    }.note{
+        border-radius: 14px;
+        padding: 5px;
+        border-color: gainsboro;
+        border-top-color: gainsboro;
+        border-style: groove;
+        
+    }
+    .container6{
+        border: 2px gainsboro solid;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    .container{
+        grid-template-areas:
+        'nav'
+        'header'
+        'main'
+        'footer'
+        'section'
+        'aside';
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 150px 480px 190px 730px 770px;
+        background-color: #e0e5eb;
+        width: 110%;
+        height: 420vh;
+        margin: 20px 0 20px 0;
+    }
+    .mark{
+        margin-left: 100px;
+        padding: 10px;
+        color: rgb(109, 106, 106);
+        cursor: pointer;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+    }
+    .button{
+        background-color: blue;
+        color: white;
+        border-style: none;
+        padding: 10px;
+        margin-left: 40px;
+    }
+    .date{
+        margin-left: 40px;
+        padding: 20px;
+        color: rgb(109, 106, 106);
+    }
+}
